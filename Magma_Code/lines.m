@@ -23,6 +23,6 @@ for i in [1 .. #allParametrizationsA] do
 	g := Evaluate(f,allParametrizationsA[i]);
 	coefs := Coefficients(g);
 	S := Scheme(A,coefs cat variablesNotInParams[i]);
-	assert Dimension(S) eq 0;
+	assert Dimension(S) le 0;
 	print Points(S);
 end for;
